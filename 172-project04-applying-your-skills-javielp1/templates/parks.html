@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ park.name }} Information</title>
+</head>
+<body>
+    <h2>{{ park.name }}</h2>
+    <ul>
+        {% for key, value in park.__dict__.items() %}
+            <li><strong>{{ key }}:</strong> {{ value }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

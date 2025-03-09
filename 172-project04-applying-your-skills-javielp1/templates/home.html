@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to the National Parks</title>
+</head>
+<body>
+    <h2>Welcome to the National Parks</h2>
+    <form action="/park_info" method="GET">
+        <label for="park">Select a National Park:</label>
+        <select id="park" name="park">
+            {% for park in parks %}
+            <option value="{{ park.name }}">{{ park.name }}</option>
+            {% endfor %}
+        </select><br><br>
+        <input type="submit" value="View Park Info">
+    </form>
+</body>
+</html>
